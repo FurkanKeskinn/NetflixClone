@@ -31,7 +31,7 @@ class CollectionViewTableViewCell: UITableViewCell {
         collectionView.dataSource = self
     }
     
-    required init(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         fatalError()
     }
     
