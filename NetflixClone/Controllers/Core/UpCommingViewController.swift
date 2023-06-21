@@ -25,6 +25,7 @@ class UpCommingViewController: UIViewController {
         
         view.backgroundColor = .systemBackground
         title = "Upcoming"
+        navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         

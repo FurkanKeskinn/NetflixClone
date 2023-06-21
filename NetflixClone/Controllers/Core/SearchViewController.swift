@@ -30,17 +30,20 @@ class SearchViewController: UIViewController {
 
         view.backgroundColor = .systemBackground
         title = "Search"
+        navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         
         view.backgroundColor = .systemBackground
         
         view.addSubview(discoverTable)
+        
         discoverTable.delegate = self
         discoverTable.dataSource = self
-        navigationItem.searchController = searchController
         
+        navigationItem.searchController = searchController
         navigationController?.navigationBar.tintColor = .white
+        
         fetchDiscoverMovies()
         
         searchController.searchResultsUpdater = self

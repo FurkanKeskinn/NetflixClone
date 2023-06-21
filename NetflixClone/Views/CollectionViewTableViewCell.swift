@@ -60,7 +60,7 @@ class CollectionViewTableViewCell: UITableViewCell {
         DataPersistenceManager.shared.donwloadTitleWith(model: titles[indexPath.row]) { result in
             switch result {
             case .success():
-                print("downloaded to Database")
+                NotificationCenter.default.post(name: NSNotification.Name("downloaded"), object: nil)
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -125,4 +125,7 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
         
         return config
     }
+    
+    
+    
 }
